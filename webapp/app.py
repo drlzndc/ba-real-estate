@@ -4,8 +4,12 @@ import joblib
 import pandas
 import streamlit as st
 
+
 # Enable import of custom helpers
-sys.path.append(os.path.abspath("../helpers"))
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.abspath(
+    ("../" if current_dir == "/app/webapp" else "") + "helpers"
+))
 
 # Import custom helpers
 from modeling            import *

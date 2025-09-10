@@ -15,3 +15,7 @@ The `models` and `helpers` directories contain files used by both modules.
 The entire app can be ran locally using docker.  
 Just clone the repository and run `docker compose up --build --detach` from the root directory.  
 Once the containers have been set up, you can visit `localhost:8000` to view the app, and `localhost:8001` to open Jupyter Lab and play around with the notebooks.
+
+## Check it out
+
+You can test out the predictions [using live app](https://ba-real-estate-drlzndc.streamlit.app/).
