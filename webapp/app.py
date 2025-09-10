@@ -5,18 +5,18 @@ import pandas
 import streamlit as st
 
 
-# Enable import of custom helpers
 current_dir = os.path.dirname(os.path.abspath(__file__))
-sys.path.append(os.path.abspath(
-    ("../" if current_dir == "/app/webapp" else "") + "helpers"
-))
+dir_prefix  = "../" if current_dir == "/app/webapp" else ""
+
+# Enable import of custom helpers
+sys.path.append(os.path.abspath(dir_prefix + "helpers"))
 
 # Import custom helpers
 from modeling            import *
 from feature_engineering import *
 
 
-model = joblib.load("../models/best_model.joblib")
+model = joblib.load(dir_prefix + "models/best_model.joblib")
 
 st.title("Apartment Price Predictor (BiH)")
 st.info("The model was trained on around 2,500 listings from OLX.ba.")
