@@ -94,6 +94,10 @@ class RowApplier(BaseEstimator, TransformerMixin):
         return X_transformed
 
 class ColumnRestorer(FunctionTransformer):
+    """
+    Used in pipeline to restore column names between preprocessing steps
+    """
+    
     def __init__(self, columns):
         self.columns = columns
         super().__init__(

@@ -14,4 +14,4 @@ The `models` and `helpers` directories contain files used by both modules.
 
 The entire app can be ran locally using docker.  
 Just clone the repository and run `docker compose up --build --detach` from the root directory.  
-Once the containers have been set up, you can visit [localhost:8000](localhost:8000) to view the app, and [localhost:8001](localhost:8001) to open Jupyter Lab and play around with the notebooks.
+Once the containers have been set up, you can visit `localhost:8000` to view the app, and `localhost:8001` to open Jupyter Lab and play around with the notebooks.
