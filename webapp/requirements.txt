@@ -1,0 +1,9 @@
+# Used for the web app framework
+streamlit
+
+# Used for data formatting
+pandas
+
+# Used for model loading and predictions
+joblib
+scikit-learn

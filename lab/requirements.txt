@@ -1,0 +1,7 @@
+# Used for plotting
+seaborn
+
+# Used for modeling and model explanations
+scikit-learn
+eli5
+shap

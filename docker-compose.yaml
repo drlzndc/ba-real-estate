@@ -1,0 +1,39 @@
+services:
+  webapp:
+    image:
+      webapp
+    container_name:
+      webapp
+    build:
+      context:
+        ./webapp
+    ports:
+      - "8000:8501"
+    volumes:
+      - ./webapp:/app/webapp
+      - ./models:/app/models
+      - ./helpers:/app/helpers
+    networks:
+      - internal_network
+
+  lab:
+    image:
+      lab
+    container_name:
+      lab
+    build:
+      context:
+        ./lab
+    ports:
+      - "8001:8888"
+    volumes:
+      - ./lab:/app/lab
+      - ./models:/app/models
+      - ./helpers:/app/helpers
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    name:
+      internal_network
